@@ -47,6 +47,33 @@ git push
 
 #### I created thsi database to insert data into the file. The file when called added the held files to the database in the respective categories. 
 
+## created tables
+#### I created tables by using following code:
+CREATE TABLE authors(
+author_id TEXT PRIMARY KEY,
+first_name TEXT,
+last_name TEXT
+);
 
+CREATE TABLE books(
+book_id TEXT PRIMARY KEY,
+title TEXT,
+year_published INTEGER,
+author_id TEXT,
+FOREIGN KEY(author_id) REFERENCES authors(author_id)
+);
+
+## Performed inner_join function
+#### I use inner join to combine two tables. The inner join matches authors.author_id with books.author_id.So, only the rows with matching author_id in both authors and books tables are returned. I use the following code:
+
+    SELECT books.title, authors.first_name, authors.last_name
+    FROM authors
+    INNER JOIN books ON authors.author_id = books.author_id;
+    
+## Performed query_fetchall function
+#### I performed fetchall() to retrive all the values of authors table. 
+
+## Performed query_aggregation function
+#### I performed query aggregation using the group by clause. I executed a group by clause to group the authors by their last_name and then counted it. 
 
 
