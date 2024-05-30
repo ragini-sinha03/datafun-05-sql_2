@@ -1,6 +1,6 @@
 # datafun-05-sql_2
 
-## created project and then coned to the machine:
+## I created a project and then coned to the machine:
 
 #### I created a new repository on GitHub.
 #### I clicked READ.md file.
